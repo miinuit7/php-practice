@@ -67,13 +67,22 @@ foreach($cities as $key => $city) {
 $cities['愛知県'] = '豊田市';
 $cities['大阪府'] = '大阪市';
 
-foreach($cities as $key => $city){
-  if(!($key == '愛知県' || $key == '大阪府')){
-    echo $key . 'の所在地は、' . $city . 'です。' . "\n";
+// foreach($cities as $key => $city){
+//   if(!($key == '愛知県' || $key == '大阪府')){
+//     echo $key . 'の所在地は、' . $city . 'です。' . "\n";
+//   } else {
+//     echo $key . 'は関東地方ではありません' .  "\n";
+//   }
+// }
+
+foreach ($cities as $key => $city) {
+  if ($key == '東京都' || $key == '神奈川県' || $key == '千葉県' || $key == '埼玉県' || $key == '栃木県' || $key == '群馬県' || $key == '茨城県') {
+      echo $key . 'の県庁所在地は、' . $city . 'です。' . PHP_EOL;
   } else {
-    echo $key . 'は関東地方ではありません' .  "\n";
+      echo $key . 'は関東地方ではありません。' . PHP_EOL;
   }
 }
+
 
 
 // Q10 関数-1
