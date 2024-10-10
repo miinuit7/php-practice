@@ -22,11 +22,13 @@ $device = 'mac';
 
 if($device == 'windows') {
   echo '使用OSは、windowsです。';
-} elseif ($device == 'mac') {
-  echo '使用OSは、macです。';
+}
+if($device == 'mac') {
+  echo '使用OS、macです。';
 } else {
   echo 'どちらでもありません。';
 }
+
 
 // Q5 条件分岐-2 三項演算子
 $age = 12;
@@ -57,10 +59,10 @@ foreach($cities as $city) {
 }
 
 // Q8 連想配列-2
-$bestCity = '埼玉県';
-
-if($bestCity == '埼玉県') {
-  echo $bestCity . 'の県庁所在地は、' . $cities[$bestCity]. '市です。';
+foreach($cities as $key => $city) {
+  if($key == '埼玉県') {
+      echo $key . 'の県庁所在地は、' . $city . 'です。';
+  }
 }
 // Q9 連想配列-3
 $cities['愛知県'] = '豊田市';

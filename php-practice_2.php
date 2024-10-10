@@ -74,12 +74,15 @@ echo '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentN
 
 
 // Q4 オブジェクト-2
+
 // オブジェクト-1と同時に記載してます
 
 
 // Q5 定義済みクラス
-$date = new DateTime();
-echo $date->format('Y-m-d'), PHP_EOL;
+$date = new DateTime('2024-10-10');
+$oneMonth = $date->modify('-1 month')->format('Y-m-d');
+echo $oneMonth , PHP_EOL;
+
 
 $nowDate = new DateTime('2024-10-09');
 $oldDate = new DateTime('1992-04-25');
