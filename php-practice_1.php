@@ -20,14 +20,12 @@ echo "現在の時刻は、" . date("Y年m月d日 H時i分s秒") . "です。";
 // Q4 条件分岐-1 if文
 $device = 'mac';
 
-if($device == 'windows') {
-  echo '使用OSは、windowsです。';
-}
-if($device == 'mac') {
-  echo '使用OS、macです。';
+if(($device == 'mac') || ($device == 'windows')) {
+  echo '使用OSは、' . $device . 'です。';
 } else {
   echo 'どちらでもありません。';
 }
+
 
 
 // Q5 条件分岐-2 三項演算子
@@ -62,6 +60,7 @@ foreach($cities as $city) {
 foreach($cities as $key => $city) {
   if($key == '埼玉県') {
       echo $key . 'の県庁所在地は、' . $city . 'です。';
+      break;
   }
 }
 // Q9 連想配列-3
@@ -125,7 +124,7 @@ function evaluateGrade($grade) {
   }
 }
 
-echo evaluateGrade("D");
-echo evaluateGrade("E");
+  echo evaluateGrade("D");
+  echo evaluateGrade("E");
 
 ?>
